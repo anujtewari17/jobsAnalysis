@@ -51,3 +51,21 @@ No NLx/Lightcast data or fabricated UXR history is included. We have not yet est
 5. Add salary, geography, seniority, skills and work arrangement only where missingness and comparability support them. Analyze associations rather than claiming causal effects.
 
 The current annual CSV results describe the imported sample, not national demand. Missing years are not treated as zero. No year-over-year growth is asserted for imported records without validated coverage.
+
+## Quantitative text lab (v0.2)
+
+Add `description` to the CSV for text analysis. Optional salary fields are `salary_min,salary_max,currency,salary_period`; salary summaries require both positive numeric range endpoints, `USD`, and `annual`. No currency or hourly conversions are inferred.
+
+`dist/text-analysis.js` contains the auditable dictionary and pure analysis functions; `dist/quant-ui.js` renders the lab. No LLM service or credentials are required. Features:
+
+- 17 dictionary themes across methods, tools, topics and responsibilities, counted once per description.
+- Year cohort comparisons of document prevalence, explicit match counts/denominators and percentage-point differences. Missing descriptions are excluded from theme denominators and reported separately.
+- Annual sample coverage, number of sources, explicit experience lower-bound medians, salary range-midpoint medians and overall salary interquartile range.
+- Document-frequency rankings of unigrams/adjacent bigrams after a fixed stopword list and minimum document threshold.
+- Theme-specific annual trajectories, searchable source excerpts, full cleaned descriptions, and extraction evidence.
+- Exported theme comparisons include cohort years, role filter, corpus type, raw counts, denominators, shares and differences.
+- Opt-in synthetic demonstration (48 entirely fictional postings). Synthetic output is labeled on screen and in exports. It is not historical UXR data and is never loaded automatically.
+
+Dictionary matches are **mentions**, not confirmed qualifications: negations, preferred/required distinctions and employer boilerplate are not resolved. Lone `R` is not matched; explicit R programming phrases are. Experience extraction supports numeric ranges and plus forms linked to experience, excludes conflicting lower bounds, and does not interpret degree substitutions or written-out numbers. These limitations require a manually audited labeled sample before using the extracts for substantive research.
+
+Year comparisons are descriptive. No p-values or population confidence intervals are reported for a convenience sample with unknown coverage and dependence. Source/ID deduplication does not resolve cross-source reposts. Stable sourcing, complete periods, employer mix and missing-text patterns must be assessed before interpreting changing theme shares. No sentiment, AI displacement, or causal conclusions are manufactured from text mentions.
