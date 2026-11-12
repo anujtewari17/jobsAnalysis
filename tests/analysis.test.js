@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {parseCSV,normalize,family,aggregate} from '../dist/analysis.js';
+const header='id,title,company,posted_date,country,source\n';
+test('CSV preserves quoted commas, escaped quotes, CRLF and multiline fields',()=>{const rows=parseCSV(header+'1,"Senior UX Researcher","Acme, Inc.",2022-01-02,US,board\r\n2,"User Researcher","A ""quoted""\ncompany",2023-01-02,US,board');assert.equal(rows[0].company,'Acme, Inc.');assert.equal(rows[1].company,'A "quoted"\ncompany');});
+test('rejects malformed files and missing fields',()=>{assert.throws(()=>parseCSV('title\nUX Researcher'),/Missing column/);assert.throws(()=>parseCSV(header+'"unclosed'),/Unclosed/);assert.throws(()=>parseCSV(header+'1,2'),/fields/);});
+test('classification excludes generic and design roles',()=>{assert.equal(family('Senior User Experience Researcher'),'UX Research');assert.equal(family('Research Operations Manager'),'Research Operations');assert.equal(family('Product Researcher'),'Adjacent research');assert.equal(family('UX Designer'),null);assert.equal(family('Market Research Analyst'),null);});
+test('deduplicates by source + ID, validates dates, and scopes to US research',()=>{const r={id:'1',title:'UX Researcher',company:'A',source:'feed',posted_date:'2022-01-01',country:'US'};const result=normalize([r,{...r},{...r,source:'other'},{...r,id:'2',country:'UK'},{...r,id:'3',posted_date:'2022-02-30'},{...r,id:'4',title:'UX Designer'},{...r,id:'5',posted_date:'2099-01-01'}]);assert.equal(result.jobs.length,2);assert.deepEqual(result.quality,{input:7,invalid:2,duplicates:1,outsideUS:1,unmatched:1,accepted:2});});
+test('annual sample counts leave missing years absent',()=>{assert.deepEqual(aggregate([{year:'2021'},{year:'2023'},{year:'2023'}]),[{period:'2021',value:1},{period:'2023',value:2}]);});
