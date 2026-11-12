@@ -40,7 +40,7 @@ Potential granular sources:
 - Lightcast: https://lightcast.io/our-data/postings (licensed access). Confirm specific product's historical coverage and aggregate publication rights.
 - BLS employment/wage data can supply occupational context, but broad categories cannot be relabeled UXR.
 
-No NLx/Lightcast data or fabricated UXR history is included. We have not yet established a freely available, consistent, title-level US UXR historical dataset.
+No NLx/Lightcast data or fabricated UXR history is included. The bundled Kaggle LinkedIn subset now supplies title-level snapshot data; continuous national historical coverage is still unavailable.
 
 ## Next research milestone
 
@@ -50,7 +50,7 @@ No NLx/Lightcast data or fabricated UXR history is included. We have not yet est
 4. Produce monthly/annual UXR counts and share of all postings within the same source. Treat partial years separately.
 5. Add salary, geography, seniority, skills and work arrangement only where missingness and comparability support them. Analyze associations rather than claiming causal effects.
 
-The current annual CSV results describe the imported sample, not national demand. Missing years are not treated as zero. No year-over-year growth is asserted for imported records without validated coverage.
+The current annual results describe the bundled or imported sample, not national demand. Missing years are not treated as zero. No year-over-year growth is asserted for imported records without validated coverage.
 
 ## Quantitative text lab (v0.2)
 
@@ -69,3 +69,24 @@ Add `description` to the CSV for text analysis. Optional salary fields are `sala
 Dictionary matches are **mentions**, not confirmed qualifications: negations, preferred/required distinctions and employer boilerplate are not resolved. Lone `R` is not matched; explicit R programming phrases are. Experience extraction supports numeric ranges and plus forms linked to experience, excludes conflicting lower bounds, and does not interpret degree substitutions or written-out numbers. These limitations require a manually audited labeled sample before using the extracts for substantive research.
 
 Year comparisons are descriptive. No p-values or population confidence intervals are reported for a convenience sample with unknown coverage and dependence. Source/ID deduplication does not resolve cross-source reposts. Stable sourcing, complete periods, employer mix and missing-text patterns must be assessed before interpreting changing theme shares. No sentiment, AI displacement, or causal conclusions are manufactured from text mentions.
+
+## Bundled real corpus (v0.3)
+
+The lab now loads 43 real descriptions automatically: 9 from 2023 and 34 from 2024. These come from two separately downloaded versions of Arsh Koneru's [LinkedIn Job Postings](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings), v9 and v13 (157,095 raw records combined). Kaggle metadata declares **CC BY-SA 4.0**. The source credits @zoeyyuzou for additional scraping. The adapted corpus and its data-derived outputs are offered under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); no endorsement is implied.
+
+Reproduce without API credentials:
+
+```sh
+mkdir -p work
+curl -fL 'https://www.kaggle.com/api/v1/datasets/download/arshkon/linkedin-job-postings?datasetVersionNumber=9' -o work/linkedin-v9.zip
+curl -fL 'https://www.kaggle.com/api/v1/datasets/download/arshkon/linkedin-job-postings?datasetVersionNumber=13' -o work/linkedin-v13.zip
+python3 scripts/prepare_linkedin.py
+node scripts/analyze_corpus.mjs
+npm test
+```
+
+Archive SHA-256 hashes, raw month distributions, explicit-US counts, processing rules and an inclusion/exclusion audit are embedded in `dist/data/research-corpus.json`. `dist/data/research-analysis.json` contains computed results from the same functions used by the frontend. Raw archives are ignored and never deployed. Prepared descriptions and computed data are the share-alike adaptations; attribution, license and change notes appear in the frontend.
+
+The pipeline screens explicit-US posting locations, uses original posting time (fallback listed time), reviews ambiguous title candidates using checked-in exclusions, then collapses LinkedIn IDs and exact cleaned descriptions (which can merge location variants). It excludes 9 non-UX candidates and 3 exact-description duplicates. Title recall is unvalidated: synonyms and non-explicit US locations may be missed. Near duplicates, recruiter reposts and employer boilerplate remain possible.
+
+**These snapshots cannot establish annual hiring growth.** V9 is concentrated in August/November 2023; v13 is overwhelmingly April 2024. The 9-description 2023 UX cohort is too small for robust historical conclusions. Use the comparison as exploratory corpus analysis and obtain broader, consistent historical coverage before making market claims.

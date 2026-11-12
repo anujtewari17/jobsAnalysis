@@ -7,13 +7,14 @@ function download(name,text){const u=URL.createObjectURL(new Blob([text],{type:'
 function table(headers,rows,caption=''){return `<table>${caption?`<caption>${esc(caption)}</caption>`:''}<thead><tr>${headers.map(x=>`<th scope="col">${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table>`;}
 function selected(){return corpus.filter(j=>$('q-family').value==='all'||j.family===$('q-family').value);}
 export function clearCorpus(){corpus=[];comparison=[];$('quant-body').hidden=true;$('quant-empty').hidden=false;$('quant-status').textContent='NO POSTING CORPUS LOADED';}
-export function setCorpus(rows,demo=false){
+export function setCorpus(rows,demo=false,metadata=null){
  corpus=enrich(rows);synthetic=demo;
  const years=[...new Set(corpus.map(j=>j.year))].sort();for(const id of ['q-base','q-current'])$(id).innerHTML=years.map(y=>`<option>${esc(y)}</option>`).join('');
  $('q-base').value=years[0];$('q-current').value=years.at(-1);$('q-family').value='all';$('q-search').value='';
- $('quant-status').textContent=demo?'SYNTHETIC EXAMPLE · NOT MARKET EVIDENCE':'IMPORTED CORPUS · COVERAGE UNVERIFIED';
+ $('quant-status').textContent=metadata?'PUBLIC CORPUS · SNAPSHOT SAMPLE':demo?'SYNTHETIC EXAMPLE · NOT MARKET EVIDENCE':'IMPORTED CORPUS · COVERAGE UNVERIFIED';
  $('corpus-banner').className='corpus-banner'+(demo?' synthetic':'');
  $('corpus-banner').textContent=demo?'SYNTHETIC EXAMPLE: all postings, companies, descriptions and salaries in this corpus are invented to demonstrate calculations. Do not interpret these results as hiring trends.':`${rows.length} accepted postings loaded. Analyses describe this corpus only. Check consistent source coverage, missing text, reposts, and partial years before interpreting a trend. Uploads stay in memory and disappear on refresh.`;
+ if(metadata){$('corpus-banner').textContent=`PUBLIC CORPUS: ${rows.length} reviewed, deduplicated US research postings from Arsh Koneru’s LinkedIn dataset, versions 9 and 13. CC BY-SA 4.0. ${metadata.limitations} View source coverage and audit below.`;}
  $('quant-body').hidden=false;$('quant-empty').hidden=true;render();
 }
 function render(){

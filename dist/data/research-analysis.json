@@ -1,0 +1,543 @@
+{
+  "metadata": {
+    "source": "https://www.kaggle.com/datasets/arshkon/linkedin-job-postings",
+    "license": "CC BY-SA 4.0",
+    "versions": [
+      9,
+      13
+    ],
+    "analysis_version": "dictionary-v1",
+    "scope": "Digital UX/user research including internships, management, hybrid researcher/design roles and UX Research Operations. Non-UX laboratory/clinical operations and physical-product/editorial research excluded after description review.",
+    "limitations": "Convenience snapshots, not continuous national coverage. Yearly volume changes are not annual hiring growth. Exact cleaned-text deduplication and reviewed exclusions applied downstream; near-duplicate reposts may remain."
+  },
+  "summary": {
+    "n": 43,
+    "textN": 43,
+    "experienceN": 10,
+    "experienceMedian": 3,
+    "salaryN": 11,
+    "salaryMedian": 126000,
+    "salaryQ1": 100975,
+    "salaryQ3": 165500
+  },
+  "annual": [
+    {
+      "year": "2023",
+      "n": 9,
+      "textN": 9,
+      "experienceN": 1,
+      "experienceMedian": 3,
+      "salaryN": 6,
+      "salaryMedian": 124350,
+      "salaryQ1": 91175,
+      "salaryQ3": 166375
+    },
+    {
+      "year": "2024",
+      "n": 34,
+      "textN": 34,
+      "experienceN": 9,
+      "experienceMedian": 3,
+      "salaryN": 5,
+      "salaryMedian": 126000,
+      "salaryQ1": 124350,
+      "salaryQ3": 157500
+    }
+  ],
+  "themes": [
+    {
+      "name": "Stakeholder collaboration",
+      "category": "Responsibilities",
+      "count": 33,
+      "n": 43,
+      "share": 0.7674418604651163
+    },
+    {
+      "name": "Usability testing",
+      "category": "Methods",
+      "count": 25,
+      "n": 43,
+      "share": 0.5813953488372093
+    },
+    {
+      "name": "Surveys",
+      "category": "Methods",
+      "count": 20,
+      "n": 43,
+      "share": 0.46511627906976744
+    },
+    {
+      "name": "Quantitative research",
+      "category": "Methods",
+      "count": 15,
+      "n": 43,
+      "share": 0.3488372093023256
+    },
+    {
+      "name": "Research strategy",
+      "category": "Responsibilities",
+      "count": 12,
+      "n": 43,
+      "share": 0.27906976744186046
+    },
+    {
+      "name": "Ethnography",
+      "category": "Methods",
+      "count": 10,
+      "n": 43,
+      "share": 0.23255813953488372
+    },
+    {
+      "name": "Mixed methods",
+      "category": "Methods",
+      "count": 8,
+      "n": 43,
+      "share": 0.18604651162790697
+    },
+    {
+      "name": "Figma",
+      "category": "Tools",
+      "count": 7,
+      "n": 43,
+      "share": 0.16279069767441862
+    },
+    {
+      "name": "User interviews",
+      "category": "Methods",
+      "count": 7,
+      "n": 43,
+      "share": 0.16279069767441862
+    },
+    {
+      "name": "Accessibility",
+      "category": "Topics",
+      "count": 6,
+      "n": 43,
+      "share": 0.13953488372093023
+    },
+    {
+      "name": "AI / machine learning",
+      "category": "Topics",
+      "count": 6,
+      "n": 43,
+      "share": 0.13953488372093023
+    },
+    {
+      "name": "Experimentation",
+      "category": "Methods",
+      "count": 6,
+      "n": 43,
+      "share": 0.13953488372093023
+    },
+    {
+      "name": "Qualtrics",
+      "category": "Tools",
+      "count": 6,
+      "n": 43,
+      "share": 0.13953488372093023
+    },
+    {
+      "name": "Python",
+      "category": "Tools",
+      "count": 5,
+      "n": 43,
+      "share": 0.11627906976744186
+    },
+    {
+      "name": "SQL",
+      "category": "Tools",
+      "count": 4,
+      "n": 43,
+      "share": 0.09302325581395349
+    },
+    {
+      "name": "Dovetail",
+      "category": "Tools",
+      "count": 2,
+      "n": 43,
+      "share": 0.046511627906976744
+    },
+    {
+      "name": "R",
+      "category": "Tools",
+      "count": 0,
+      "n": 43,
+      "share": 0
+    }
+  ],
+  "comparison": {
+    "baseline": "2023",
+    "comparison": "2024",
+    "themes": [
+      {
+        "name": "Ethnography",
+        "category": "Methods",
+        "count": 5,
+        "n": 34,
+        "share": 0.14705882352941177,
+        "baseCount": 5,
+        "baseN": 9,
+        "baseShare": 0.5555555555555556,
+        "delta": -40.849673202614376
+      },
+      {
+        "name": "Experimentation",
+        "category": "Methods",
+        "count": 2,
+        "n": 34,
+        "share": 0.058823529411764705,
+        "baseCount": 4,
+        "baseN": 9,
+        "baseShare": 0.4444444444444444,
+        "delta": -38.56209150326797
+      },
+      {
+        "name": "Surveys",
+        "category": "Methods",
+        "count": 14,
+        "n": 34,
+        "share": 0.4117647058823529,
+        "baseCount": 6,
+        "baseN": 9,
+        "baseShare": 0.6666666666666666,
+        "delta": -25.49019607843137
+      },
+      {
+        "name": "Usability testing",
+        "category": "Methods",
+        "count": 18,
+        "n": 34,
+        "share": 0.5294117647058824,
+        "baseCount": 7,
+        "baseN": 9,
+        "baseShare": 0.7777777777777778,
+        "delta": -24.836601307189543
+      },
+      {
+        "name": "User interviews",
+        "category": "Methods",
+        "count": 4,
+        "n": 34,
+        "share": 0.11764705882352941,
+        "baseCount": 3,
+        "baseN": 9,
+        "baseShare": 0.3333333333333333,
+        "delta": -21.56862745098039
+      },
+      {
+        "name": "Research strategy",
+        "category": "Responsibilities",
+        "count": 11,
+        "n": 34,
+        "share": 0.3235294117647059,
+        "baseCount": 1,
+        "baseN": 9,
+        "baseShare": 0.1111111111111111,
+        "delta": 21.24183006535948
+      },
+      {
+        "name": "Figma",
+        "category": "Tools",
+        "count": 7,
+        "n": 34,
+        "share": 0.20588235294117646,
+        "baseCount": 0,
+        "baseN": 9,
+        "baseShare": 0,
+        "delta": 20.588235294117645
+      },
+      {
+        "name": "Accessibility",
+        "category": "Topics",
+        "count": 6,
+        "n": 34,
+        "share": 0.17647058823529413,
+        "baseCount": 0,
+        "baseN": 9,
+        "baseShare": 0,
+        "delta": 17.647058823529413
+      },
+      {
+        "name": "Quantitative research",
+        "category": "Methods",
+        "count": 11,
+        "n": 34,
+        "share": 0.3235294117647059,
+        "baseCount": 4,
+        "baseN": 9,
+        "baseShare": 0.4444444444444444,
+        "delta": -12.091503267973852
+      },
+      {
+        "name": "SQL",
+        "category": "Tools",
+        "count": 4,
+        "n": 34,
+        "share": 0.11764705882352941,
+        "baseCount": 0,
+        "baseN": 9,
+        "baseShare": 0,
+        "delta": 11.76470588235294
+      },
+      {
+        "name": "AI / machine learning",
+        "category": "Topics",
+        "count": 4,
+        "n": 34,
+        "share": 0.11764705882352941,
+        "baseCount": 2,
+        "baseN": 9,
+        "baseShare": 0.2222222222222222,
+        "delta": -10.45751633986928
+      },
+      {
+        "name": "Dovetail",
+        "category": "Tools",
+        "count": 2,
+        "n": 34,
+        "share": 0.058823529411764705,
+        "baseCount": 0,
+        "baseN": 9,
+        "baseShare": 0,
+        "delta": 5.88235294117647
+      },
+      {
+        "name": "Mixed methods",
+        "category": "Methods",
+        "count": 6,
+        "n": 34,
+        "share": 0.17647058823529413,
+        "baseCount": 2,
+        "baseN": 9,
+        "baseShare": 0.2222222222222222,
+        "delta": -4.575163398692808
+      },
+      {
+        "name": "Qualtrics",
+        "category": "Tools",
+        "count": 5,
+        "n": 34,
+        "share": 0.14705882352941177,
+        "baseCount": 1,
+        "baseN": 9,
+        "baseShare": 0.1111111111111111,
+        "delta": 3.5947712418300664
+      },
+      {
+        "name": "Stakeholder collaboration",
+        "category": "Responsibilities",
+        "count": 26,
+        "n": 34,
+        "share": 0.7647058823529411,
+        "baseCount": 7,
+        "baseN": 9,
+        "baseShare": 0.7777777777777778,
+        "delta": -1.3071895424836666
+      },
+      {
+        "name": "Python",
+        "category": "Tools",
+        "count": 4,
+        "n": 34,
+        "share": 0.11764705882352941,
+        "baseCount": 1,
+        "baseN": 9,
+        "baseShare": 0.1111111111111111,
+        "delta": 0.6535947712418305
+      },
+      {
+        "name": "R",
+        "category": "Tools",
+        "count": 0,
+        "n": 34,
+        "share": 0,
+        "baseCount": 0,
+        "baseN": 9,
+        "baseShare": 0,
+        "delta": 0
+      }
+    ]
+  },
+  "terms": [
+    {
+      "term": "research",
+      "count": 42,
+      "n": 43,
+      "share": 0.9767441860465116
+    },
+    {
+      "term": "user",
+      "count": 40,
+      "n": 43,
+      "share": 0.9302325581395349
+    },
+    {
+      "term": "design",
+      "count": 39,
+      "n": 43,
+      "share": 0.9069767441860465
+    },
+    {
+      "term": "needs",
+      "count": 35,
+      "n": 43,
+      "share": 0.813953488372093
+    },
+    {
+      "term": "product",
+      "count": 35,
+      "n": 43,
+      "share": 0.813953488372093
+    },
+    {
+      "term": "researcher",
+      "count": 34,
+      "n": 43,
+      "share": 0.7906976744186046
+    },
+    {
+      "term": "human",
+      "count": 31,
+      "n": 43,
+      "share": 0.7209302325581395
+    },
+    {
+      "term": "teams",
+      "count": 31,
+      "n": 43,
+      "share": 0.7209302325581395
+    },
+    {
+      "term": "findings",
+      "count": 30,
+      "n": 43,
+      "share": 0.6976744186046512
+    },
+    {
+      "term": "process",
+      "count": 30,
+      "n": 43,
+      "share": 0.6976744186046512
+    },
+    {
+      "term": "data",
+      "count": 29,
+      "n": 43,
+      "share": 0.6744186046511628
+    },
+    {
+      "term": "development",
+      "count": 29,
+      "n": 43,
+      "share": 0.6744186046511628
+    },
+    {
+      "term": "insights",
+      "count": 29,
+      "n": 43,
+      "share": 0.6744186046511628
+    },
+    {
+      "term": "understanding",
+      "count": 29,
+      "n": 43,
+      "share": 0.6744186046511628
+    },
+    {
+      "term": "usability",
+      "count": 29,
+      "n": 43,
+      "share": 0.6744186046511628
+    },
+    {
+      "term": "help",
+      "count": 28,
+      "n": 43,
+      "share": 0.6511627906976745
+    },
+    {
+      "term": "stakeholders",
+      "count": 28,
+      "n": 43,
+      "share": 0.6511627906976745
+    },
+    {
+      "term": "factors",
+      "count": 27,
+      "n": 43,
+      "share": 0.627906976744186
+    },
+    {
+      "term": "location",
+      "count": 27,
+      "n": 43,
+      "share": 0.627906976744186
+    },
+    {
+      "term": "methods",
+      "count": 27,
+      "n": 43,
+      "share": 0.627906976744186
+    },
+    {
+      "term": "ability",
+      "count": 26,
+      "n": 43,
+      "share": 0.6046511627906976
+    },
+    {
+      "term": "products",
+      "count": 26,
+      "n": 43,
+      "share": 0.6046511627906976
+    },
+    {
+      "term": "related",
+      "count": 26,
+      "n": 43,
+      "share": 0.6046511627906976
+    },
+    {
+      "term": "strong",
+      "count": 26,
+      "n": 43,
+      "share": 0.6046511627906976
+    },
+    {
+      "term": "collaborate",
+      "count": 25,
+      "n": 43,
+      "share": 0.5813953488372093
+    },
+    {
+      "term": "degree",
+      "count": 25,
+      "n": 43,
+      "share": 0.5813953488372093
+    },
+    {
+      "term": "psychology",
+      "count": 25,
+      "n": 43,
+      "share": 0.5813953488372093
+    },
+    {
+      "term": "qualitative",
+      "count": 25,
+      "n": 43,
+      "share": 0.5813953488372093
+    },
+    {
+      "term": "studies",
+      "count": 25,
+      "n": 43,
+      "share": 0.5813953488372093
+    },
+    {
+      "term": "business",
+      "count": 24,
+      "n": 43,
+      "share": 0.5581395348837209
+    }
+  ]
+}
