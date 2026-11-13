@@ -1,0 +1,321 @@
+{
+  "metadata": {
+    "source": "https://huggingface.co/datasets/jobicy/remote-jobs",
+    "license": "Jobicy Remote Jobs Dataset Terms v1.0",
+    "revision": "b22e454bcc086253f3b5fa2c29d3523e87ff8d9c",
+    "limitations": "Remote-only convenience feed. Two US research descriptions: insufficient for market trends. Feed pubDate can change on repost; retained date is earliest in this downloaded archive, not verified original employer publication. No inference about current vacancy status."
+  },
+  "summary": {
+    "n": 2,
+    "textN": 2,
+    "experienceN": 2,
+    "experienceMedian": 5.5,
+    "salaryN": 1,
+    "salaryMedian": 208369,
+    "salaryQ1": 208369,
+    "salaryQ3": 208369
+  },
+  "themes": [
+    {
+      "name": "Mixed methods",
+      "category": "Methods",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "name": "Quantitative research",
+      "category": "Methods",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "name": "Stakeholder collaboration",
+      "category": "Responsibilities",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "name": "Surveys",
+      "category": "Methods",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "name": "Usability testing",
+      "category": "Methods",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "name": "User interviews",
+      "category": "Methods",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "name": "AI / machine learning",
+      "category": "Topics",
+      "count": 1,
+      "n": 2,
+      "share": 0.5
+    },
+    {
+      "name": "Ethnography",
+      "category": "Methods",
+      "count": 1,
+      "n": 2,
+      "share": 0.5
+    },
+    {
+      "name": "Experimentation",
+      "category": "Methods",
+      "count": 1,
+      "n": 2,
+      "share": 0.5
+    },
+    {
+      "name": "Accessibility",
+      "category": "Topics",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    },
+    {
+      "name": "Dovetail",
+      "category": "Tools",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    },
+    {
+      "name": "Figma",
+      "category": "Tools",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    },
+    {
+      "name": "Python",
+      "category": "Tools",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    },
+    {
+      "name": "Qualtrics",
+      "category": "Tools",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    },
+    {
+      "name": "R",
+      "category": "Tools",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    },
+    {
+      "name": "Research strategy",
+      "category": "Responsibilities",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    },
+    {
+      "name": "SQL",
+      "category": "Tools",
+      "count": 0,
+      "n": 2,
+      "share": 0
+    }
+  ],
+  "terms": [
+    {
+      "term": "accommodation",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "accommodation participate",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "actionable",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "actionable insights",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "alignment",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "audiences",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "based",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "behaviors",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "best",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "best practices",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "bets",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "build",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "business",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "comfortable",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "compelling",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "complex",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "connect",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "creative",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "culture",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "curiosity",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "data",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "decision",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "decision making",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "deep",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "deep understanding",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "design",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "designers",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "drive",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "essential",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    },
+    {
+      "term": "every",
+      "count": 2,
+      "n": 2,
+      "share": 1
+    }
+  ]
+}

@@ -90,3 +90,23 @@ Archive SHA-256 hashes, raw month distributions, explicit-US counts, processing 
 The pipeline screens explicit-US posting locations, uses original posting time (fallback listed time), reviews ambiguous title candidates using checked-in exclusions, then collapses LinkedIn IDs and exact cleaned descriptions (which can merge location variants). It excludes 9 non-UX candidates and 3 exact-description duplicates. Title recall is unvalidated: synonyms and non-explicit US locations may be missed. Near duplicates, recruiter reposts and employer boilerplate remain possible.
 
 **These snapshots cannot establish annual hiring growth.** V9 is concentrated in August/November 2023; v13 is overwhelmingly April 2024. The 9-description 2023 UX cohort is too small for robust historical conclusions. Use the comparison as exploratory corpus analysis and obtain broader, consistent historical coverage before making market claims.
+
+## Recent source: Jobicy (v0.4)
+
+The app now opens on the **Jobicy (remote)** source. The pinned archive through November 12, 2026 contains 11,708 records / 8,593 distinct Jobicy IDs, but only **two distinct explicitly US UX Research roles** after title screening, description review, and repost deduplication. The LinkedIn sample remains a separate source option. Source filters apply to summary metrics, annual counts, terms, evidence, and exported comparisons. The simpler employer/annual panel has its own source selector.
+
+The research jobs' earliest archive publication dates are September 3 and September 15, 2026; repeated appearances occur October 4 and October 16. There are no later matching US research roles in this download. `pubDate` can reset on repost and is not verified employer-original posting time. We retain the earliest publication per ID within the downloaded archive. This small, remote-only source cannot establish national demand or historical growth. An all-source selection shows an explicit coverage warning.
+
+```sh
+python3 scripts/fetch_jobicy.py
+node scripts/analyze_jobicy.mjs
+npm test
+```
+
+The fetch script pins the repository revision returned at fetch time, records SHA-256 hashes of the selected daily files, and limits publication files to the November 12, 2026 cutoff. Raw data and dataset terms remain in ignored `work/jobicy/`. JSONL is split on ASCII newlines (Unicode paragraph separators can occur inside valid description strings). The preparation script records exclusions and repeated appearances. Change the cutoff intentionally when refreshing; this deployment does not run a background schedule.
+
+Jobicy's custom dataset terms permit analysis and use of the compilation but do not relicense employers' full descriptions. We analyze full descriptions locally and deploy **prepared dictionary features, document-term sets, experience/salary extracts, and canonical Jobicy links**, rather than full descriptions. The app uses these prepared features only for trusted bundled data, not arbitrary CSV content. Data-derived metrics and terms use the same analysis functions as personal uploads and the older source. The prepared outputs are `dist/data/jobicy-corpus.json` and `dist/data/jobicy-analysis.json` and retain Jobicy attribution; they are not labeled as LinkedIn's CC BY-SA data.
+
+Source: https://huggingface.co/datasets/jobicy/remote-jobs
+Terms: https://huggingface.co/datasets/jobicy/remote-jobs/blob/main/LICENSE
+Canonical listings link back to https://jobicy.com. No endorsement or current-open status is implied.
